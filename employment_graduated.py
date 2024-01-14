@@ -15,14 +15,17 @@ data = data.dropna(subset=['Region'])
 # Converte i tipi di dati
 data['Employment Rate 2021'] = pd.to_numeric(data['Employment Rate 2021'], errors='coerce')
 
-# Scatter plot
+
+# Mappa i colori dei punti in base alla colonna 'Region Group'
 scatter_fig = px.scatter(
     data,
     x='Employment Rate 2021',
     y='Number of Graduates 2021',
-    color='Region Group',
-    hover_name='Region'
+    color='Region Group',  # Colonna per il colore
+    hover_name='Region',
+    color_discrete_map={'North': 'Red', 'South': 'Green', 'Central': 'Blue'}  # Mappa dei colori
 )
+
 
 
 scatter_fig.update_layout(
