@@ -35,7 +35,7 @@ scatter_fig.update_layout(
         'font': dict(
             family="Arial, sans-serif",  # Cambio del tipo di carattere in Arial
             size=10,
-            color="#252525"
+            color="lightgrey"
         )
     }
 )
