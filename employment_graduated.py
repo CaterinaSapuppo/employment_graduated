@@ -2,10 +2,11 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# Carica i dati (Aggiorna il percorso del file o caricalo direttamente)
+# Funzione per caricare i dati
 @st.cache
 def load_data():
-    data = pd.read_excel('/path/to/your/data.xlsx')  # Aggiorna questo percorso
+    file_path = '/path/to/your/data.xlsx'  # Aggiorna questo con il percorso locale del tuo file
+    data = pd.read_excel(file_path)
     data.columns = ['Region Group', 'Region', 'Employment Rate 2021', 'Number of Graduates 2021']
     data['Region Group'] = data['Region Group'].ffill()
     data = data.dropna(subset=['Region'])
