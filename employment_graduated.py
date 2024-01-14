@@ -13,10 +13,7 @@ data['Region Group'] = data['Region Group'].ffill()
 data = data.dropna(subset=['Region'])
 
 # Converte i tipi di dati
-data['Employment Rate 2021'] = pd.to_numeric(data['Employment Rate 2021'], errors='coerce') * 100
-
-# Crea un'app Streamlit
-
+data['Employment Rate 2021'] = pd.to_numeric(data['Employment Rate 2021'], errors='coerce')
 
 # Scatter plot
 scatter_fig = px.scatter(
@@ -46,11 +43,10 @@ scatter_fig.update_layout(
 # Aggiungi etichette degli assi x e y
 scatter_fig.update_xaxes(title_text='Employment Rate 2021 (%)')
 scatter_fig.update_yaxes(title_text='Number of Graduates 2021')
+
 # Aggiungi linee degli assi x e y
 scatter_fig.update_xaxes(showline=True, linewidth=1, linecolor='black')
 scatter_fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
-
-
 scatter_fig.update_layout(plot_bgcolor='white')
 scatter_fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
 scatter_fig.update_xaxes(showticklabels=True)
