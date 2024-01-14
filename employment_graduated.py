@@ -30,11 +30,11 @@ scatter_fig.update_layout(
         'text': "Employment rate vs Number of Graduated Students in all Italian Regions, 2021",
         'y': 0.9,
         'x': 0.5,
-        'xanchor': 'center',
+        'xanchor': 'left',
         'yanchor': 'top',
         'font': dict(
             family="Arial, sans-serif",  # Cambio del tipo di carattere in Arial
-            size=10,
+            size=14,
             color="darkgrey"
         )
     }
