@@ -23,7 +23,7 @@ scatter_fig = px.scatter(
     y='Number of Graduates 2021',
     color='Region Group',  # Colonna per il colore
     hover_name='Region',
-    color_discrete_map={'North': 'red', 'South': 'green', 'Central': 'blue'}  # Mappa dei colori
+    color_discrete_map={'North': '#ff0000', 'South': '#228b22', 'Central': '#0000ff'}  # Mappa dei colori
 )
 
 
