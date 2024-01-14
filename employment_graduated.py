@@ -16,7 +16,7 @@ data = data.dropna(subset=['Region'])
 data['Employment Rate 2021'] = pd.to_numeric(data['Employment Rate 2021'], errors='coerce') * 100
 
 # Crea un'app Streamlit
-st.title('Employment rate vs Number of Graduated Students in all Italian Regions, 2021')
+
 
 # Scatter plot
 scatter_fig = px.scatter(
