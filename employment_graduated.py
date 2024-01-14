@@ -1,13 +1,15 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import io
+import requests
 
-# Funzione per caricare i dati
+# Funzione per caricare i dati da GitHub
 @st.cache
 def load_data():
-    # Aggiorna questo con il percorso assoluto del tuo file sul server
-    file_path = '/path/to/your/data.xlsx'
-    data = pd.read_excel(file_path)
+    url = 'https://raw.githubusercontent.com/yourusername/yourrepository/main/employment%20-%20graduated%20.xlsx'
+    content = requests.get(url).content
+    data = pd.read_excel(io.BytesIO(content))
     data.columns = ['Region Group', 'Region', 'Employment Rate 2021', 'Number of Graduates 2021']
     data['Region Group'] = data['Region Group'].ffill()
     data = data.dropna(subset=['Region'])
