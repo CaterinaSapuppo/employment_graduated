@@ -45,7 +45,7 @@ scatter_fig.update_layout(
 
 
 
-scatter_fig.update_layout(plot_bgcolor='white')
+scatter_fig.update_layout(plot_bgcolor='black')
 scatter_fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
 scatter_fig.update_xaxes(showticklabels=True)
 
