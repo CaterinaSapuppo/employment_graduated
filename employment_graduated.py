@@ -59,6 +59,42 @@ scatter_fig.update_layout(plot_bgcolor='white')
 scatter_fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
 scatter_fig.update_xaxes(showticklabels=True)
 
+# Aggiungi una "box" intorno alla figura
+scatter_fig.add_shape(
+    type='line',
+    x0=data['Employment Rate 2021'].min(),
+    x1=data['Employment Rate 2021'].max(),
+    y0=data['Number of Graduates 2021'].min(),
+    y1=data['Number of Graduates 2021'].min(),
+    line=dict(color='black', width=1)
+)
+
+scatter_fig.add_shape(
+    type='line',
+    x0=data['Employment Rate 2021'].min(),
+    x1=data['Employment Rate 2021'].max(),
+    y0=data['Number of Graduates 2021'].max(),
+    y1=data['Number of Graduates 2021'].max(),
+    line=dict(color='black', width=1)
+)
+
+scatter_fig.add_shape(
+    type='line',
+    x0=data['Employment Rate 2021'].min(),
+    x1=data['Employment Rate 2021'].min(),
+    y0=data['Number of Graduates 2021'].min(),
+    y1=data['Number of Graduates 2021'].max(),
+    line=dict(color='black', width=1)
+)
+
+scatter_fig.add_shape(
+    type='line',
+    x0=data['Employment Rate 2021'].max(),
+    x1=data['Employment Rate 2021'].max(),
+    y0=data['Number of Graduates 2021'].min(),
+    y1=data['Number of Graduates 2021'].max(),
+    line=dict(color='black', width=1)
+)
+
 # Mostra il grafico con Streamlit
 st.plotly_chart(scatter_fig)
-
