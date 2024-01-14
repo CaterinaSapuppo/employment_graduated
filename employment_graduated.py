@@ -2,16 +2,20 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-# Load the data
+# Carica i dati
 data = pd.read_excel('employment_graduated.xlsx')
 
-# Clean and prepare the data
+# Rinomina le colonne
 data.columns = ['Region Group', 'Region', 'Employment Rate 2021', 'Number of Graduates 2021']
+
+# Gestisci i dati mancanti
 data['Region Group'] = data['Region Group'].ffill()
 data = data.dropna(subset=['Region'])
+
+# Converte i tipi di dati
 data['Employment Rate 2021'] = pd.to_numeric(data['Employment Rate 2021'], errors='coerce') * 100
 
-# Create a Streamlit app
+# Crea un'app Streamlit
 st.title('Employment rate vs Number of Graduated Students in all Italian Regions, 2021')
 
 # Scatter plot
@@ -27,5 +31,5 @@ scatter_fig.update_layout(plot_bgcolor='white')
 scatter_fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
 scatter_fig.update_xaxes(showticklabels=True)
 
-# Display the plot using Streamlit
+# Mostra il grafico con Streamlit
 st.plotly_chart(scatter_fig)
