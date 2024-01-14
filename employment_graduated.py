@@ -45,9 +45,9 @@ scatter_fig.update_layout(
 
 
 
-# Aggiorna la configurazione dell'asse X
 scatter_fig.update_xaxes(
-    showgrid=False,  # Mostra la griglia
+    tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+    showgrid=True,  # Mostra la griglia
     gridcolor='LightGrey',  # Colore della griglia
     linecolor='Black',  # Colore della linea dell'asse
     linewidth=2,  # Spessore della linea dell'asse
