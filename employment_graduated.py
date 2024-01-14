@@ -15,19 +15,14 @@ data = data.dropna(subset=['Region'])
 # Converte i tipi di dati
 data['Employment Rate 2021'] = pd.to_numeric(data['Employment Rate 2021'], errors='coerce')
 
-
-
 scatter_fig = px.scatter(
     data,
     x='Employment Rate 2021',
     y='Number of Graduates 2021',
     color='Region Group',
     hover_name='Region',
-  # Imposta la dimensione dei punti a 8
+    # Imposta la dimensione dei punti a 8
 )
-
-
-
 
 scatter_fig.update_layout(
     title={
@@ -53,10 +48,9 @@ scatter_fig.update_layout(
     )
 )
 
-
 # Aggiungi etichette degli assi x e y
 scatter_fig.update_xaxes(title_text='Employment Rate 2021 (%)')
-scatter_fig.update_yaxes(title_text='Number of Graduates 2021')
+scatter_fig.update_yaxes(title_text='Number of Graduates 2021', range=[0, data['Number of Graduates 2021'].max() + 1000])
 
 # Aggiungi linee degli assi x e y
 scatter_fig.update_xaxes(showline=True, linewidth=1, linecolor='black')
