@@ -56,8 +56,14 @@ scatter_fig.update_yaxes(title_text='Number of Graduates 2021', range=[-500, dat
 scatter_fig.update_xaxes(showline=True, linewidth=1, linecolor='black')
 scatter_fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
 scatter_fig.update_layout(plot_bgcolor='white')
-scatter_fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
-scatter_fig.update_xaxes(showticklabels=True)
+
+# Imposta l'asse x con incrementi di 20%
+scatter_fig.update_xaxes(
+    tickvals=list(range(0, 101, 20)),
+    ticktext=[f'{i}%' for i in range(0, 101, 20)],
+    showticklabels=True,
+)
 
 # Mostra il grafico con Streamlit
 st.plotly_chart(scatter_fig)
+
