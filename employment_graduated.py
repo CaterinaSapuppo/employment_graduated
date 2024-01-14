@@ -25,6 +25,8 @@ scatter_fig = px.scatter(
     y='Number of Graduates 2021',
     color='Region Group',
     hover_name='Region'
+    linecolor='Black',  # Colore della linea dell'asse
+    linewidth=2,  # Spessore della linea dell'asse
 )
 
 
