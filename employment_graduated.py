@@ -31,17 +31,18 @@ scatter_fig = px.scatter(
 scatter_fig.update_layout(
     title={
         'text': "Employment rate vs Number of Graduated Students in all Italian Regions, 2021",
-        'y':0.9,
-        'x':0.5,
+        'y': 0.9,
+        'x': 0.5,
         'xanchor': 'center',
         'yanchor': 'top',
         'font': dict(
-            family="Courier New, monospace",
+            family="Arial, sans-serif",  # Cambio del tipo di carattere in Arial
             size=10,
             color="#252525"
         )
     }
 )
+
 
 
 scatter_fig.update_layout(plot_bgcolor='white')
