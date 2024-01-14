@@ -34,7 +34,7 @@ scatter_fig.update_layout(
         'yanchor': 'top',
         'font': dict(
             family="Arial, sans-serif",  # Cambio del tipo di carattere in Arial
-            size=14,
+            size=12,
             color="darkgrey"
         )
     }
