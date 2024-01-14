@@ -50,19 +50,14 @@ scatter_fig.update_layout(
 
 # Aggiungi etichette degli assi x e y
 scatter_fig.update_xaxes(title_text='Employment Rate 2021 (%)')
-scatter_fig.update_yaxes(title_text='Number of Graduates 2021', range=[0, data['Number of Graduates 2021'].max() + 1000])
+scatter_fig.update_yaxes(title_text='Number of Graduates 2021', range=[-500, data['Number of Graduates 2021'].max() + 1000])
 
 # Aggiungi linee degli assi x e y
 scatter_fig.update_xaxes(showline=True, linewidth=1, linecolor='black')
 scatter_fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
 scatter_fig.update_layout(plot_bgcolor='white')
-
-# Imposta l'asse x con incrementi di 20%
-scatter_fig.update_xaxes(
-    tickvals=list(range(0, 101, 20)),
-    ticktext=[f'{i}%' for i in range(0, 101, 20)],
-    showticklabels=True,
-)
+scatter_fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+scatter_fig.update_xaxes(showticklabels=True)
 
 # Mostra il grafico con Streamlit
 st.plotly_chart(scatter_fig)
