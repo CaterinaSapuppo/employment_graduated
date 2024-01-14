@@ -27,6 +27,23 @@ scatter_fig = px.scatter(
     hover_name='Region'
 )
 
+
+scatter_fig.update_layout(
+    title={
+        'text': "Employment rate vs Number of Graduated Students in all Italian Regions, 2021",
+        'y':0.9,
+        'x':0.5,
+        'xanchor': 'center',
+        'yanchor': 'top',
+        'font': dict(
+            family="Courier New, monospace",
+            size=18,
+            color="#7f7f7f"
+        )
+    }
+)
+
+
 scatter_fig.update_layout(plot_bgcolor='white')
 scatter_fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
 scatter_fig.update_xaxes(showticklabels=True)
