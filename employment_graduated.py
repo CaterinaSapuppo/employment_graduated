@@ -1,9 +1,8 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
 
-# Load the data
-data = pd.read_excel('employment_graduated.xlsx', engine='openpyxl')
-
+# Load the data from your desktop
+data = pd.read_excel('/Users/caterinasapuppo/Desktop/employment_graduated.xlsx')
 
 # Clean and prepare the data
 data.columns = ['Region Group', 'Region', 'Employment Rate 2021', 'Number of Graduates 2021']
@@ -26,4 +25,5 @@ fig = px.scatter(
 fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
 
 st.plotly_chart(fig)
+streamlit run app.py
 
