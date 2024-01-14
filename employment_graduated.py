@@ -45,6 +45,27 @@ scatter_fig.update_layout(
 
 
 
+# Aggiorna la configurazione dell'asse X
+scatter_fig.update_xaxes(
+    showgrid=False,  # Mostra la griglia
+    gridcolor='LightGrey',  # Colore della griglia
+    linecolor='Black',  # Colore della linea dell'asse
+    linewidth=2,  # Spessore della linea dell'asse
+    showticklabels=True  # Mostra le etichette dei valori
+)
+
+# Aggiorna la configurazione dell'asse Y
+scatter_fig.update_yaxes(
+    showgrid=False,  # Mostra la griglia
+    gridcolor='LightGrey',  # Colore della griglia
+    linecolor='Black',  # Colore della linea dell'asse
+    linewidth=2  # Spessore della linea dell'asse
+)
+
+# Mostra il grafico con Streamlit
+st.plotly_chart(scatter_fig)
+
+
 scatter_fig.update_layout(plot_bgcolor='white')
 scatter_fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
 scatter_fig.update_xaxes(showticklabels=True)
