@@ -23,7 +23,6 @@ scatter_fig = px.scatter(
     y='Number of Graduates 2021',
     color='Region Group',  # Colonna per il colore
     hover_name='Region',
-    marker_size=8
 )
 
 
