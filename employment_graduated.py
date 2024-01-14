@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 # Load the data
-data = pd.read_excel('/Users/caterinasapuppo/Desktop/employment_graduated.xlsx')
+data = pd.read_excel('data = pd.read_excel('employment_graduated.xlsx')
 
 # Clean and prepare the data
 data.columns = ['Region Group', 'Region', 'Employment Rate 2021', 'Number of Graduates 2021']
