@@ -16,14 +16,14 @@ data = data.dropna(subset=['Region'])
 data['Employment Rate 2021'] = pd.to_numeric(data['Employment Rate 2021'], errors='coerce')
 
 
-# Aumenta leggermente la dimensione dei punti
+
 scatter_fig = px.scatter(
     data,
     x='Employment Rate 2021',
     y='Number of Graduates 2021',
     color='Region Group',
     hover_name='Region',
-    marker_size=8  # Imposta la dimensione dei punti a 8
+  # Imposta la dimensione dei punti a 8
 )
 
 
