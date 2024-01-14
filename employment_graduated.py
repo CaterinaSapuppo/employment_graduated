@@ -1,7 +1,9 @@
 import streamlit as st
+import pandas as pd
 
 # Load the data
-data = pd.read_excel('employment_graduated.xlsx')
+data = pd.read_excel('employment_graduated.xlsx', engine='openpyxl')
+
 
 # Clean and prepare the data
 data.columns = ['Region Group', 'Region', 'Employment Rate 2021', 'Number of Graduates 2021']
