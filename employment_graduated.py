@@ -18,15 +18,6 @@ data['Employment Rate 2021'] = pd.to_numeric(data['Employment Rate 2021'], error
 # Crea un'app Streamlit
 
 
-# Scatter plot
-scatter_fig = px.scatter(
-    data,
-    x='Employment Rate 2021',
-    y='Number of Graduates 2021',
-    color='Region Group',
-    hover_name='Region'
-)
-
 
 scatter_fig.update_layout(
     title={
@@ -54,13 +45,6 @@ scatter_fig.update_xaxes(
     showticklabels=True  # Mostra le etichette dei valori
 )
 
-# Aggiorna la configurazione dell'asse Y
-scatter_fig.update_yaxes(
-    showgrid=False,  # Mostra la griglia
-    gridcolor='LightGrey',  # Colore della griglia
-    linecolor='Black',  # Colore della linea dell'asse
-    linewidth=2  # Spessore della linea dell'asse
-)
 
 # Mostra il grafico con Streamlit
 st.plotly_chart(scatter_fig)
