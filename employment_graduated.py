@@ -60,7 +60,7 @@ scatter_fig.update_layout(plot_bgcolor='white')
 # Imposta l'asse x con incrementi di 20%
 scatter_fig.update_xaxes(
     tickvals=list(range(0, 101, 20)),
-    ticktext=[f'{i}%' for i in range(0, 101, 20)],
+    ticktext=[f'{i}%' for i in range(0, 10, 20)],
     showticklabels=True,
 )
 
