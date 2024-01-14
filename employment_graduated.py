@@ -37,8 +37,8 @@ scatter_fig.update_layout(
         'yanchor': 'top',
         'font': dict(
             family="Courier New, monospace",
-            size=18,
-            color="#7f7f7f"
+            size=10,
+            color="#252525"
         )
     }
 )
