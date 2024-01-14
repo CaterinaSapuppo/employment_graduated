@@ -45,7 +45,7 @@ scatter_fig.update_layout(
     legend=dict(
         bordercolor="darkgrey",  # Imposta il colore del bordo della legenda a nero
         borderwidth=1,  # Imposta la larghezza del bordo a 1
-        y=0.95  # Imposta la coordinata y della legenda per spostarla leggermente più in basso
+        y=0.70  # Imposta la coordinata y della legenda per spostarla leggermente più in basso
     )
 )
 
