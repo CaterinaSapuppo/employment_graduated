@@ -40,6 +40,14 @@ scatter_fig.update_layout(
     }
 )
 
+# Aggiungi un riquadro intorno alla legenda
+scatter_fig.update_layout(
+    legend=dict(
+        bordercolor="black",  # Imposta il colore del bordo della legenda a nero
+        borderwidth=1,  # Imposta la larghezza del bordo a 1
+    )
+)
+
 # Aggiungi etichette degli assi x e y
 scatter_fig.update_xaxes(title_text='Employment Rate 2021 (%)')
 scatter_fig.update_yaxes(title_text='Number of Graduates 2021')
