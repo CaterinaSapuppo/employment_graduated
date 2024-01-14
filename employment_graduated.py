@@ -52,14 +52,7 @@ scatter_fig.update_layout(
 scatter_fig.update_xaxes(title_text='Employment Rate 2021 (%)')
 scatter_fig.update_yaxes(title_text='Number of Graduates 2021', range=[-500, data['Number of Graduates 2021'].max() + 1000])
 
-# Aggiungi linee degli assi x e y
-scatter_fig.update_xaxes(showline=True, linewidth=1, linecolor='black')
-scatter_fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
-scatter_fig.update_layout(plot_bgcolor='white')
-scatter_fig.update_xaxes(tickvals=[10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
-scatter_fig.update_xaxes(showticklabels=True)
-
-# Aggiungi una "box" intorno alla figura
+# Aggiungi linee degli assi x e y per creare una "box"
 scatter_fig.add_shape(
     type='line',
     x0=data['Employment Rate 2021'].min(),
