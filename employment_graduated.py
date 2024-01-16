@@ -31,7 +31,7 @@ scatter_fig.update_layout(
         'yanchor': 'top',
         'font': dict(
             family="DejaVu Sans, sans-serif",  # Cambio del tipo di carattere in DejaVu Sans
-            size=14,
+            size=18,
             color="gray"
         )
     }
