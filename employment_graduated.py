@@ -52,7 +52,7 @@ scatter_fig.update_layout(
 
 
 # Aggiungi etichette degli assi x e y
-scatter_fig.update_xaxes(title_text='Employment Rate (%)', range=[0, 100])  # Impostato range da 0 a 100
+scatter_fig.update_xaxes(title_text='Employment Rate (%)', range=[0, 80])  # Impostato range da 0 a 100
 scatter_fig.update_yaxes(title_text='Number of Graduates', range=[-500, data['Number of Graduates 2021'].max() + 1000])
 
 # Aggiungi linee degli assi x e y
