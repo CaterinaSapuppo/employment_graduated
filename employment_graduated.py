@@ -25,7 +25,7 @@ scatter_fig = px.scatter(
 scatter_fig.update_layout(
     title={
         'text': "Employment rate vs Number of Graduated Students in all Italian Regions in 2021",
-        'y': 0.9,
+        'y': 1,
         'x': 0.4,
         'xanchor': 'center',
         'yanchor': 'top',
