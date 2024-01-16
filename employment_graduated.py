@@ -32,26 +32,21 @@ scatter_fig.update_layout(
         'font': dict(
             family="DejaVu Sans, sans-serif",  # Cambio del tipo di carattere in DejaVu Sans
             size=14,
-            color="darkgrey"
+            color="gray"
         )
     }
 )
 
-# Sposta la legenda leggermente più in basso
+# Legend
 scatter_fig.update_layout(
     legend=dict(
-        bordercolor="darkgrey",  # Imposta il colore del bordo della legenda a nero
+        bordercolor="gray",  # Imposta il colore del bordo della legenda a nero
         borderwidth=1,  # Imposta la larghezza del bordo a 1
         y=0.50  # Imposta la coordinata y della legenda per spostarla leggermente più in basso
     )
 )
 
 
-
-
-# ... [Il tuo codice precedente fino alla configurazione degli assi] ...
-
-# Aggiungi linee per formare un rettangolo con gli assi X e Y
 scatter_fig.add_shape(
     # Linea che va dal minimo dell'asse Y al massimo, all'estremo dell'asse X
     type="line",
@@ -60,39 +55,27 @@ scatter_fig.add_shape(
     line=dict(color="Black", width=2)
 )
 scatter_fig.add_shape(
-    # Linea che va dal minimo dell'asse X al massimo, all'estremo dell'asse Y
+    
     type="line",
     x0=0, y0=data['Number of Graduates 2021'].max() + 1000,  # Punto di partenza (minimo di X, massimo di Y)
     x1=80, y1=data['Number of Graduates 2021'].max() + 1000,  # Punto di arrivo (massimo di X, massimo di Y)
     line=dict(color="Black", width=2)
 )
 
-# ... [Resto del tuo codice, ad esempio per mostrare il grafico con Streamlit] ...
 
-
-
-
-
-
-# Aggiungi etichette degli assi x e y
-scatter_fig.update_xaxes(title_text='Employment Rate (%)', range=[0, 80])  # Impostato range da 0 a 100
+scatter_fig.update_xaxes(title_text='Employment Rate (%)', range=[0, 80])  
 scatter_fig.update_yaxes(title_text='Number of Graduates', range=[-500, data['Number of Graduates 2021'].max() + 1000])
 
-# Aggiungi linee degli assi x e y
+
 scatter_fig.update_xaxes(showline=True, linewidth=1, linecolor='black')
 scatter_fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
 
-# Imposta lo sfondo del grafico a bianco
+
 scatter_fig.update_layout(plot_bgcolor='white')
 
 # Imposta i valori specifici per i tick dell'asse x
 scatter_fig.update_xaxes(tickvals=[20, 40, 60])
 scatter_fig.update_xaxes(showticklabels=True)
-
-
-
-
-
 
 
 
