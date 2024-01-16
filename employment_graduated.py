@@ -86,7 +86,7 @@ scatter_fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
 scatter_fig.update_layout(plot_bgcolor='white')
 
 # Imposta i valori specifici per i tick dell'asse x
-scatter_fig.update_xaxes(tickvals=[20, 40, 60, 80])
+scatter_fig.update_xaxes(tickvals=[20, 40, 60])
 scatter_fig.update_xaxes(showticklabels=True)
 
 
