@@ -26,7 +26,7 @@ scatter_fig.update_layout(
     title={
         'text': "Employment rate vs Number of Graduated Students in all Italian Regions in 2021",
         'y': 0.95,
-        'x': 0.4,
+        'x': 0.42,
         'xanchor': 'center',
         'yanchor': 'top',
         'font': dict(
