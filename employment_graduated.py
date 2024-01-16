@@ -49,6 +49,29 @@ scatter_fig.update_layout(
 
 
 
+# ... [Il tuo codice precedente fino alla configurazione degli assi] ...
+
+# Aggiungi linee per formare un rettangolo con gli assi X e Y
+scatter_fig.add_shape(
+    # Linea che va dal minimo dell'asse Y al massimo, all'estremo dell'asse X
+    type="line",
+    x0=80, y0=-500,  # Punto di partenza (massimo di X, minimo di Y)
+    x1=80, y1=data['Number of Graduates 2021'].max() + 1000,  # Punto di arrivo (massimo di X, massimo di Y)
+    line=dict(color="Black", width=2)
+)
+scatter_fig.add_shape(
+    # Linea che va dal minimo dell'asse X al massimo, all'estremo dell'asse Y
+    type="line",
+    x0=0, y0=data['Number of Graduates 2021'].max() + 1000,  # Punto di partenza (minimo di X, massimo di Y)
+    x1=80, y1=data['Number of Graduates 2021'].max() + 1000,  # Punto di arrivo (massimo di X, massimo di Y)
+    line=dict(color="Black", width=2)
+)
+
+# ... [Resto del tuo codice, ad esempio per mostrare il grafico con Streamlit] ...
+
+
+
+
 
 
 # Aggiungi etichette degli assi x e y
