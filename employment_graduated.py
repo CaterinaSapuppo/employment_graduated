@@ -40,25 +40,25 @@ scatter_fig.update_layout(
 # Legend
 scatter_fig.update_layout(
     legend=dict(
-        bordercolor="gray",  # Imposta il colore del bordo della legenda a nero
-        borderwidth=1,  # Imposta la larghezza del bordo a 1
-        y=0.50  # Imposta la coordinata y della legenda per spostarla leggermente più in basso
+        bordercolor="gray",  
+        borderwidth=1,  
+        y=0.50  
     )
 )
 
 
 scatter_fig.add_shape(
-    # Linea che va dal minimo dell'asse Y al massimo, all'estremo dell'asse X
+    
     type="line",
-    x0=80, y0=-500,  # Punto di partenza (massimo di X, minimo di Y)
-    x1=80, y1=data['Number of Graduates 2021'].max() + 1000,  # Punto di arrivo (massimo di X, massimo di Y)
+    x0=80, y0=-500,  
+    x1=80, y1=data['Number of Graduates 2021'].max() + 1000,  
     line=dict(color="Black", width=2)
 )
 scatter_fig.add_shape(
     
     type="line",
-    x0=0, y0=data['Number of Graduates 2021'].max() + 1000,  # Punto di partenza (minimo di X, massimo di Y)
-    x1=80, y1=data['Number of Graduates 2021'].max() + 1000,  # Punto di arrivo (massimo di X, massimo di Y)
+    x0=0, y0=data['Number of Graduates 2021'].max() + 1000,  
+    x1=80, y1=data['Number of Graduates 2021'].max() + 1000,  
     line=dict(color="Black", width=2)
 )
 
@@ -73,11 +73,9 @@ scatter_fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
 
 scatter_fig.update_layout(plot_bgcolor='white')
 
-# Imposta i valori specifici per i tick dell'asse x
+
 scatter_fig.update_xaxes(tickvals=[20, 40, 60])
 scatter_fig.update_xaxes(showticklabels=True)
 
 
-
-# Mostra il grafico con Streamlit
 st.plotly_chart(scatter_fig)
